@@ -38,6 +38,11 @@ async function main() {
     contractsDir + "/TokenERC20.json",
     JSON.stringify(Artifact, null, 2)
   );
+  Artifact = artifacts.readArtifactSync("VoteERC20");
+  fs.writeFileSync(
+    contractsDir + "/VoteERC20.json",
+    JSON.stringify(Artifact, null, 2)
+  );
 }
 
 main()
