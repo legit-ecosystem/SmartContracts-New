@@ -43,6 +43,11 @@ async function main() {
     contractsDir + "/VoteERC20.json",
     JSON.stringify(Artifact, null, 2)
   );
+  Artifact = artifacts.readArtifactSync("TokenERC721");
+  fs.writeFileSync(
+    contractsDir + "/TokenERC721.json",
+    JSON.stringify(Artifact, null, 2)
+  );
 }
 
 main()
